@@ -22,5 +22,8 @@ def binary_search_guess(number: int = None) -> int:
 # Проверяем работу алгоритма
 if __name__ == "__main__":
     np.random.seed(1)  # Фиксируем seed для воспроизводимости
-    attempts = [binary_search_guess(np.random.randint(1, 101)) for _ in range(1000)]
+    attempts = [
+        binary_search_guess(np.random.randint(1, 101))
+        for _ in range(1000)
+    ]
     print(f"Среднее количество попыток: {np.mean(attempts)}")
